@@ -12,6 +12,13 @@ namespace CursoWebAPI
             CreateMap<Villa,VillaDto>().ReverseMap();
             CreateMap<Villa,VillaCreateDto>().ReverseMap();
             CreateMap<Villa,VillaUpdateDto>().ReverseMap();
+
+
+            CreateMap<NumeroVilla, NumeroVillaCreateDto>().ReverseMap();
+            CreateMap<NumeroVilla, NumeroVillaUpdateDto>().ReverseMap();
+            CreateMap<NumeroVilla, NumeroVillaDto>().ReverseMap();
+
+
         }
     }
 }

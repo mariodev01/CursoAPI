@@ -1,5 +1,7 @@
 using CursoWebAPI;
 using CursoWebAPI.Data;
+using CursoWebAPI.Repository;
+using CursoWebAPI.Repository.IRepository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +20,9 @@ builder.Services.AddDbContext<ApplicationDbcontex>(option =>
 });
 
 builder.Services.AddAutoMapper(typeof(MappinConfig));
+
+builder.Services.AddScoped<IVillaRepositorio, VillaRepositorio>();
+builder.Services.AddScoped<INumeroVillaRepositorio, NumeroVillaRepositorio>();
 
 var app = builder.Build();
 
